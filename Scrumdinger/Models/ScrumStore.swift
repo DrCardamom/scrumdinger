@@ -16,6 +16,10 @@ class ScrumStore: ObservableObject {
             .appendingPathComponent("scrums.data")
     }
     
+    func load()async throws-> [DailyScrum] {
+        
+    }
+    
     static func load(completion: @escaping (Result<[DailyScrum], Error>) -> Void){
         DispatchQueue.global(qos: .background).async {
             do {
